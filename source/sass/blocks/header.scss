@@ -1,0 +1,38 @@
+.header {
+  background-color: $dark-blue;
+}
+
+.header__logo-title,
+.header__btn,
+.header__title,
+.header__btn-name {
+  font-family: $title-text;
+  color: $white;
+}
+
+.header__btn {
+  background-color: rgba(100, 100, 100, -1);
+  border: 1px solid $white;
+}
+
+.header__logo-text {
+  font-family: $logo-text;
+  color: $gray;
+}
+
+.header__mail,
+.header__tel,
+.header__text,
+.header__information-scroll {
+  font-family: $main-text;
+  color: $white;
+}
+
+.header__information-btn {
+  background-color: $blue;
+  border: none;
+}
+
+.header__information-scroll {
+  opacity: 0.5;
+}

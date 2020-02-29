@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.link {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: $mobile-width;
+  font-family: $main-text;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg,
+svg * {
+  fill: inherit;
+  stroke: inherit;
+}
+
+
+::-webkit-input-placeholder { /* Chrome */
+  color: $white;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: $white;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: $white;
+  opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: $white;
+  opacity: 1;
+}

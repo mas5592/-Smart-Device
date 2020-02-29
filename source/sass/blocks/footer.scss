@@ -1,0 +1,26 @@
+.footer {
+  background-color: $lightest-gray;
+}
+
+.footer__logo-title {
+  font-family: $title-text;
+  color: $darkest-blue;
+}
+
+.footer__logo-text {
+  font-family: $logo-text;
+  color: $gray;
+}
+
+.footer__sections-title {
+  font-family: $title-text;
+  color: $gray-blue;
+}
+
+.footer__sections-link,
+.footer__contacts-text,
+.footer__tel-link,
+.footer__wrap-text {
+  font-family: $main-text;
+  color: $gray-blue;
+}

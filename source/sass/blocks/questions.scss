@@ -1,0 +1,31 @@
+.questions {
+  background-color: $blue;
+}
+
+.questions__title,
+.questions__btn {
+  font-family: $title-text;
+  color: $white;
+}
+
+.questions__text,
+.questions__input,
+.questions__checkbox {
+  font-family: $main-text;
+  color: $white;
+}
+
+.questions__input,
+.questions__textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.questions__img {
+  display: none;
+}
+
+.questions__btn {
+  border: 1px solid $white;
+  background-color: $blue;
+}

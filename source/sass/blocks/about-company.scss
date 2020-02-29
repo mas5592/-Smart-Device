@@ -1,0 +1,20 @@
+.about-company {
+  background-color: $white;
+}
+
+.about-company__title {
+  font-family: $title-text;
+  color: $dark-gray;
+}
+
+.about-company__text {
+  font-family: $main-text;
+  color: $dark-gray;
+}
+
+.about-company__link {
+  font-family: $title-text;
+  border: 1px solid $blue;
+  color: $blue;
+  background-color: $white;
+}

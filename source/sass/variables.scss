@@ -1,0 +1,21 @@
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-l-max-width: ($tablet-width - 1);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$title-text: "Roboto Condensed", arial, helvetica, sans-serif;
+$main-text: "PT Mono", arial, helvetica, sans-serif;
+$logo-text: "Roboto", arial, helvetica, sans-serif;
+
+$white: #ffffff;
+$gray:#788891;
+$dark-gray: #666666;
+$light-gray: #cdcdcd;
+$lightest-gray: #fafafa;
+$blue: #00b2ff;
+$dark-blue: #1b2a31;
+$darkest-blue:#203c42;
+$gray-blue: #1b2d37;
