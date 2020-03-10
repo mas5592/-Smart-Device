@@ -1,7 +1,8 @@
 .about-company {
-  background-color: $white;
   padding: 10px 14px;
-  margin-bottom: 69px;
+  margin-bottom: 70px;
+  position: relative;
+  max-width: 1254px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -9,11 +10,21 @@
     flex-direction: row;
     margin-bottom: 87px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding: 67px 14px 67px 119px;
+    margin-bottom: 58px;
+  }
 }
 
 .about-company__wrap {
   @media (min-width: $tablet-width) {
     margin-left: 196px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 103px;
   }
 }
 
@@ -33,6 +44,13 @@
     line-height: 140.62%;
     padding: 2px 0 5px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+  }
 }
 
 .about-company__text {
@@ -48,6 +66,14 @@
   @media (min-width: $tablet-width) {
     padding: 20px 5px 1px 3px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 17px 5px 3px 0;
+  }
 }
 
 .about-company__text:nth-child(3) {
@@ -56,10 +82,18 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 49px;
+  }
 }
 
 .about-company__other-text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .about-company__link {
@@ -77,6 +111,12 @@
   border-radius: 5px;
   padding: 13px 50px;
   text-decoration: none;
+
+  &:hover {
+    border: 1px solid $white;
+    color: $white;
+    background-color: $blue;
+  }
 }
 
 .about-company__img {
@@ -86,5 +126,14 @@
     display: block;
     position: absolute;
     left: 0;
+    width: 244px;
+    height: 362px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 220px;
+    height: 317px;
+    top: 74px;
+    left: 17px;
   }
 }

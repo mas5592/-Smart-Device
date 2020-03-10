@@ -5,6 +5,12 @@
   @media (min-width: $tablet-width) {
     padding: 20px 16px 32px 16px;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1218px;
+    margin: 0 auto;
+    padding: 56px  12px 32px 12px;
+  }
 }
 
 .catalog__title,
@@ -27,6 +33,12 @@
     padding: 30px 8px 20px 9px;
     margin-bottom: 31px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 33px;
+  }
 }
 
 .catalog__text {
@@ -44,19 +56,28 @@
     top: 40px;
     left: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    top: 50px;
+  }
 }
+
 
 .catalog__text--light {
   padding-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    top: 40px;
+  }
 }
 
 .catalog__icon-vector {
   fill: $white;
   z-index: 222;
-  width: 63px;
+  width: 62px;
   height: 63px;
   background-color: $blue;
-  padding: 27px 28px 28px 23px;
+  padding: 27px 25px 28px 25px;
   right: 0;
   bottom: 0;
   position: absolute;
@@ -84,6 +105,13 @@
   @media (min-width: $tablet-width) {
     padding: 0 7px 0 9px;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 8px;
+  }
 }
 
 .catalog__link {
@@ -94,6 +122,10 @@
   margin-top: 0;
   display: block;
   overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    min-height: 620px;
+  }
 }
 
 .catalog__item {
@@ -102,8 +134,23 @@
   min-height: 254px;
   margin-bottom: 30px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 620px;
+    max-width: 370px;
+  }
+}
+
+.catalog__item:nth-child(3) {
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -112,4 +159,3 @@
   height: 100%;
   opacity: 0.3;
 }
-
