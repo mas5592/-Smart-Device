@@ -1,20 +1,13 @@
 .questions {
-  background-color: $blue;
-  padding: 10px 16px 42px 15px;
+  display: flex;
+  padding-top: 65px;
+  max-width: 1200px;
+  padding-left: 10px;
+  padding-right: 15px;
+  margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
-    padding: 40px 85px 82px 88px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 1710px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 80px;
-    padding-right: 17px;
-    justify-content: flex-end;
+  @media (max-width: $max-mob-width) {
+    padding-top: 15px;
   }
 }
 
@@ -32,16 +25,17 @@
 }
 
 .questions__checkbox {
-  max-width: 259px;
-  margin: 9px 0 0 38px;
+  margin: 8px 0 0 25px;
+  max-width: 200px;
+  cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     max-width: 236px;
+    margin: 9px 0 0 38px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 8px 0 0 25px;
-    max-width: 200px;
+  @media (max-width: $max-mob-width) {
+    max-width: 259px;
   }
 }
 
@@ -52,50 +46,60 @@
 }
 
 .questions__img-wap {
-  display: none;
+  position: relative;
+  width: 50%;
+  height: 288px;
+  top: 100px;
+  left: -42px;
 
-  @media (min-width: $desktop-width) {
-    display: block;
-  }
-}
-
-.questions__img {
-  @media (min-width: $desktop-width) {
+  &::before {
+    content: "";
     position: absolute;
+    top: -226px;
+    left: -153px;
     width: 686px;
-    height: auto;
-    left: -8.3%;
-    top: -9.8%;
+    height: 641px;
+    background: url("../img/airplane.png") center no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  @media (max-width: $max-tab-width) {
+    display: none;
   }
 }
 
 .questions__wapper {
-  width: 100%;
+  width: 50%;
+  padding: 11px 0 11px 15px;
 
-  @media (min-width: $desktop-width) {
-    width: 50%;
-    padding: 11px 10px;
-    margin-right: 36px;
+  @media (max-width: $max-tab-width) {
+    width: 100%;
+    padding: 11px 0 11px 78px;
+  }
+
+  @media (max-width: $max-mob-width) {
+    padding-left: 5px;
   }
 }
 
 .questions__title {
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 140.62%;
   margin: 0;
-  padding: 20px 0 5px 0;
+  font-size: 36px;
+  line-height: 51px;
+  padding: 16px 0 3px 0;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     font-size: 32px;
-    padding: 40px 0 10px 0;
+    padding: 4px 0 10px 0;
+    line-height: 140.62%;
   }
 
-  @media (min-width: $desktop-width) {
-    font-size: 36px;
-    line-height: 51px;
-    padding-bottom: 3px;
+  @media (max-width: $max-mob-width) {
+    font-size: 28px;
+    padding: 4px 0 5px 0;
   }
 }
 
@@ -104,79 +108,84 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  margin: 0;
-  padding: 7px 0 25px 0;
+  margin: 0 0 25px 0;
+  padding: 7px 5px 25px 5px;
 
-  @media (min-width: $tablet-width) {
-    padding: 7px 5px 25px 5px;
-    margin-bottom: 27px;
+  @media (max-width: $max-tab-width) {
+    margin: 0 0 27px 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (max-width: $max-mob-width) {
+    padding: 7px 0 26px 0;
+    margin: 0;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 25px;
   }
 }
 
 .questions__form {
   display: flex;
   flex-wrap: wrap;
+  max-width: 574px;
+  flex-direction: row;
+  justify-content: space-between;
 
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 574px;
+  @media (max-width: $max-tab-width) {
+    max-width: 595px;
   }
 }
 
 .questions__input {
   width: 100%;
-  min-height: 50px;
-  padding-left: 16px;
+  max-width: 48%;
+  min-height: 52px;
+  padding-left: 19px;
   line-height: 22px;
-  margin-bottom: 32px;
   font-size: 16px;
+  margin-bottom: 37px;
+  margin-left: 1px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     margin-bottom: 43px;
-    max-width: 48%;
-    min-height: 52px;
-    padding-left: 19px;
+    margin-left: 0;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 37px;
-    margin-left: 1px;
+  @media (max-width: $max-mob-width) {
+    min-height: 50px;
+    padding-left: 16px;
+    margin-bottom: 32px;
+    max-width: 100%;
   }
 }
 
 .questions__input:nth-child(2) {
-  @media (min-width: $tablet-width) {
-    padding-left: 22px;
+  padding-left: 22px;
+
+  @media (max-width: $max-mob-width) {
+    padding-left: 17px;
   }
 }
 
 .questions__textarea {
   width: 100%;
-  min-height: 106px;
-  line-height: 26px;
   padding: 10px 2px 2px 16px;
   font-size: 16px;
   resize: none;
+  min-height: 153px;
+  line-height: 22px;
+  letter-spacing: 0.7px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     margin-left: 5px;
     min-height: 160px;
+    letter-spacing: 0;
+    font-size: 18px;
   }
 
-  @media (min-width: $desktop-width) {
-    min-height: 153px;
-    line-height: 22px;
-    letter-spacing: 0.7px;
+  @media (max-width: $max-mob-width) {
+    min-height: 106px;
+    line-height: 26px;
+    margin-left: 0;
   }
 }
 
@@ -192,9 +201,11 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 5px;
-  padding-top: 15px;
-  padding-bottom: 14px;
+  padding: 15px 17px 14px 6px;
   margin-bottom: 21px;
+  margin-right: 37px;
+  max-width: 271px;
+  cursor: pointer;
 
   &:hover,
   &:active {
@@ -203,29 +214,30 @@
     color: $blue;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     max-width: 280px;
     margin-right: 38px;
+    padding: 15px 6px 14px 6px;
   }
 
-  @media (min-width: $desktop-width) {
-    padding-right: 17px;
-    margin-right: 37px;
-    max-width: 271px;
+  @media (max-width: $max-mob-width) {
+    margin-right: 0;
+    max-width: 100%;
   }
 }
 
 .questions__btn-wapper {
-  margin-top: 29px;
   width: 100%;
+  margin-top: 44px;
+  margin-left: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 44px;
-    margin-left: 4px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+  @media (max-width: $max-mob-width) {
+    margin-top: 29px;
+    margin-left: 0;
+    display: block;
   }
 }
 

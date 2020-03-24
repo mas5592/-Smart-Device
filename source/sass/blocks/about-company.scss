@@ -1,98 +1,100 @@
 .about-company {
-  padding: 10px 14px;
-  margin-bottom: 70px;
+  display: flex;
   position: relative;
   max-width: 1254px;
+  margin: 0 auto;
+  padding: 67px 14px 67px 119px;
+  margin-bottom: 58px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 87px;
+    padding-top: 10px;
+    padding-bottom: 98px;
+    margin: 0;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    padding: 67px 14px 67px 119px;
-    margin-bottom: 58px;
+  @media (max-width: $max-mob-width) {
+    padding: 29px 14px 10px 14px;
+    margin-bottom: 69px;
   }
 }
 
 .about-company__wrap {
-  @media (min-width: $tablet-width) {
-    margin-left: 196px;
+  margin-left: 103px;
+
+  @media (max-width: $max-tab-width) {
+    margin-left: 91px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-left: 103px;
+  @media (max-width: $max-mob-width) {
+    margin-left: 0;
   }
 }
 
 .about-company__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
   font-family: $title-text;
   color: $dark-gray;
-  font-size: 28px;
-  line-height: 140.62%;
-  font-style: normal;
-  font-weight: 400;
   margin: 0;
 
-  @media (min-width: $tablet-width) {
-    font-style: normal;
-    font-weight: normal;
+  @media (max-width: $max-tab-width) {
     font-size: 32px;
     line-height: 140.62%;
     padding: 2px 0 5px 0;
   }
 
-  @media (min-width: $desktop-width) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 51px;
+  @media (max-width: $max-mob-width) {
+    font-size: 28px;
+    line-height: 140.62%;
   }
 }
 
 .about-company__text {
-  font-family: $main-text;
-  color: $dark-gray;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  padding: 24px 5px 3px 0;
+  font-family: $main-text;
+  color: $dark-gray;
   margin: 0;
-  padding: 20px 2px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     padding: 20px 5px 1px 3px;
   }
 
-  @media (min-width: $desktop-width) {
-    font-style: normal;
-    font-weight: normal;
+  @media (max-width: $max-mob-width) {
     font-size: 16px;
-    line-height: 22px;
-    padding: 17px 5px 3px 0;
+    padding: 13px 2px 26px;
   }
 }
 
 .about-company__text:nth-child(3) {
-  margin-bottom: 22px;
+  margin-bottom: 49px;
+  padding-top: 17px;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $max-tab-width) {
     margin-bottom: 53px;
+    padding-top: 19px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 49px;
+  @media (max-width: $max-mob-width) {
+    margin-bottom: 22px;
+    padding-bottom: 21px;
+    padding-top: 13px;
   }
 }
 
 .about-company__other-text {
-  display: none;
+  display: block;
 
-  @media (min-width: $desktop-width) {
-    display: block;
+  @media (max-width: $max-tab-width) {
+    display: none;
   }
 }
 
@@ -120,20 +122,21 @@
 }
 
 .about-company__img {
-  display: none;
+  display: block;
+  position: absolute;
+  width: 220px;
+  height: 317px;
+  top: 74px;
+  left: 17px;
 
-  @media (min-width: $tablet-width) {
-    display: block;
-    position: absolute;
+  @media (max-width: $max-tab-width) {
+    top: 10px;
     left: 0;
     width: 244px;
     height: 362px;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 220px;
-    height: 317px;
-    top: 74px;
-    left: 17px;
+  @media (max-width: $max-mob-width) {
+    display: none;
   }
 }

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Сайт Smart-Device</title>
-  <link href="css/normalize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
   <header class="header">
     <div class="header__wrap-top">
       <div class="header__logo">
-        <a class="header__logo-link" href="#">
+        <a class="header__logo-link" aria-label="главная страница">
           <img class="header__logo-img" src="img/logo.svg" alt="логотип сайта smart device">
           <div class="header__logo-wrap">
             <p class="header__logo-title">Smart Device</p>
@@ -51,14 +50,13 @@
     <div class="header__information-block">
       <h2 class="header__title">ПЕЧАТНЫЕ ПЛАТЫ</h2>
       <p class="header__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <button class="header__information-btn" type="button">
-        <span class="header__btn-name header__btn-name--big">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</span>
-        <span class="header__btn-name">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
-      </button>
+      <a class="header__btn-name header__btn-name--big" href="#consultation">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</a>
+      <a class="header__btn-name header__btn-name--min" href="#consultation">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</a>
+
       <picture>
-        <source media="(min-width: 1150px)" srcset="img/board-desktop@1x.png">
-        <source media="(min-width: 768px)" srcset="img/board-tablet@1x.png">
-        <img class="header__information-img" src="img/board-mobile@1x.png" alt="изображение печатной платы" width="705" height="515">
+        <source media="(max-width: 767px)" srcset="img/board-mobile@1x.webp 1x, img/board-mobile@2x.webp 2x">
+        <source media="(max-width: 1023px)" srcset="img/board-tablet@1x.webp 1x, img/board-tablet@2x.webp 2x">
+        <img class="header__information-img" src="img/board-desktop@1x.webp" srcset="img/board-desktop@2x.webp 2x" alt="изображение печатной платы" width="705" height="515">
       </picture>
       <a class="header__information-scroll" href="#guidelines">Скролл вниз</a>
     </div>
@@ -103,17 +101,17 @@
     </section>
     <section class="about-company">
       <picture>
-        <source media="(min-width: 768px)" srcset="img/year-tablet@1x.png">
-        <img class="about-company__img" src="img/year-desktop@1x.png" alt="год основания 2005">
+        <source type="image/webp" srcset="img/2005@2x.webp 2x, img/2005.webp 1x">
+        <img class="about-company__img" src="img/2005.png" srcset="img/2005@2x.png 2x" alt="год основания 2005">
       </picture>
       <div class="about-company__wrap">
         <h2 class="about-company__title">О компании</h2>
         <p class="about-company__text">Мы поставляем электронные комплектующие, производим печатные платы и
-          предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+          предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
         </p>
         <p class="about-company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
           HOLGLITRONIC, REFOND. Печатные
-          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..
+          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
           <span class="about-company__other-text">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
             наших клиентов крупнейшие Производители
             светотехники России.</span>
@@ -127,10 +125,13 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__link" href="#">
-              <picture class="catalog__wrap">
-                <source media="(min-width: 1150px)" srcset="img/production-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/production-tablet@1x.jpg">
-                <img class="catalog__link-img" src="img/production-mobile@1x.jpg" alt="изображение производства печатных плат">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/production-mobile@2x.jpg 2x, img/production-mobile@1x.jpg 1x">
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/production-mobile@2x.webp 2x, img/production-mobile@1x.webp 1x">
+                <source media="(max-width: 1023px)" srcset="img/production-tablet@2x.jpg 2x, img/production-tablet@1x.jpg 1x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/production-tablet@2x.webp 2x, img/production-tablet@1x.webp 1x">
+                <source type="image/webp" srcset="img/production-desktop@2x.webp 2x, img/production-desktop@1x.webp 1x">
+                <img class="catalog__link-img" src="img/production-desktop@1x.jpg" srcset="production-desktop@2x.jpg 2x" alt="изображение производства печатных плат">
               </picture>
               <h3 class="catalog__text">Производство печатных плат</h3>
               <svg class="catalog__icon-vector">
@@ -140,10 +141,13 @@
           </li>
           <li class="catalog__item">
             <a class="catalog__link" href="#">
-              <picture class="catalog__wrap">
-                <source media="(min-width: 1150px)" srcset="img/montage-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/montage-tablet@1x.jpg">
-                <img class="catalog__link-img" src="img/montage-mobile@1x.jpg" alt="изображение монтажа печатных плат">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/montage-mobile@2x.jpg 2x, img/montage-mobile@1x.jpg 1x">
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/mounting-mobile@2x.webp 2x, img/mounting-mobile.webp 1x">
+                <source media="(max-width: 1023px)" srcset="img/montage-tablet@2x.jpg 2x, img/montage-tablet@1x.jpg 1x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/montage-tablet@2x.webp 2x, img/montage-tablet@1x.webp 1x">
+                <source type="image/webp" srcset="img/montage-desktop@2x.webp 2x, img/montage-desktop@1x.webp 1x">
+                <img class="catalog__link-img" src="img/montage-desktop@1x.jpg" srcset="img/montage-desktop@2x.jpg 2x" alt="изображение монтажа печатных плат">
               </picture>
               <h3 class="catalog__text">Монтаж печатных плат</h3>
               <svg class="catalog__icon-vector">
@@ -153,10 +157,13 @@
           </li>
           <li class="catalog__item">
             <a class="catalog__link" href="#">
-              <picture class="catalog__wrap">
-                <source media="(min-width: 1150px)" srcset="img/components-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/components-tablet@1x.jpg">
-                <img class="catalog__link-img" src="img/components-mobile@1x.jpg" alt="изображение комплектующих для светотехники">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/components-mobile@2x.jpg 2x, img/components-mobile@1x.jpg 1x">
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/components-mobile@2x.webp 2x, img/components-mobile@1x.webp 1x">
+                <source media="(max-width: 1023px)" srcset="img/components-tablet@2x.jpg 2x, img/components-tablet@1x.jpg 1x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/components-tablet@2x.webp 2x, img/components-tablet@1x.webp 1x">
+                <source type="image/webp" srcset="img/components-desktop@2x.webp 2x, img/components-desktop@1x.webp 1x">
+                <img class="catalog__link-img" src="components-desktop@1x.jpg" srcset="img/components-desktop@2x.jpg 2x" alt="изображения комплектующих для светотехники">
               </picture>
               <h3 class="catalog__text catalog__text--light">Комплектующие для светотехники</h3>
               <svg class="catalog__icon-vector">
@@ -167,17 +174,15 @@
         </ul>
       </div>
     </section>
-    <section class="wrap-blue">
+    <section class="wrap-blue" id="consultation">
       <div class="questions">
-        <div class="questions__img-wap">
-          <img class="questions__img" src="img/airplane.png" alt="изображение бумажного самолетика" width="511" height="288">
-        </div>
+        <div class="questions__img-wap"></div>
         <div class="questions__wapper">
           <h2 class="questions__title">Остались вопросы? Задайте их нам!</h2>
           <p class="questions__text">Мы проконсультируем Вас бесплатно</p>
           <form class="questions__form" method="POST" action="#">
             <input class="questions__input" type="text" id="questions-name" placeholder="Имя">
-            <input class="questions__input questions__input--phone" type="text" id="questions-phone" placeholder="Телефон" autocomplete="on" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required="">
+            <input class="questions__input questions__input--phone" type="text" id="questions-phone" placeholder="Телефон" autocomplete="on" required="">
             <textarea class="questions__textarea" id="questions-text" placeholder="Ваш вопрос"></textarea>
             <label for="questions-name"></label>
             <label for="questions-phone"></label>
@@ -193,81 +198,79 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="footer__cont">
-      <div class="footer">
-        <div class="footer__wrap footer__wrap--top">
-          <div class="footer__wrap-social">
-            <div class="footer__logo">
-              <a class="footer__logo-link" href="#">
-                <img src="img/logo.svg" width="52" height="52" alt="логотип сайта smart device">
-                <div class="footer__logo-wrap">
-                  <p class="footer__logo-title">Service Device</p>
-                  <span class="footer__logo-text">умные технологии</span>
-                </div>
-              </a>
-            </div>
-            <p class="footer__text">1999-2018 SD Service Devices</p>
-            <ul class="footer__social">
-              <li class="footer__item"><a class="footer__icon-link" href="https://www.facebook.com" title="группа Smart Device в фейсбуке" aria-label="группа Smart Device в фейсбуке">
-                  <svg class="footer__icon footer__icon--facebook">
-                    <use xlink:href="#icon-facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__item"><a class="footer__icon-link" href="https://www.ok.ru" title="группа Smart Device в одноклассниках" aria-label="группа Smart Device в одноклассниках">
-                  <svg class="footer__icon footer__icon--ok">
-                    <use xlink:href="#icon-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__item"><a class="footer__icon-link" href="https://www.ok.ru" title="группа Smart Device вконтакте" aria-label="группа Smart Device вконтакте">
-                  <svg class="footer__icon footer__icon--vk">
-                    <use xlink:href="#icon-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__wrap-item">
-            <div class="footer__sections">
-              <h2 class="footer__sections-title">Разделы сайта</h2>
-              <button class="footer__btn footer__btn--plus" id="btn-sections" aria-label="Кнопка панели разделы сайта" type="button"></button>
-              <ul class="footer__sections-list">
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">О компании</a></li>
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">Продукты</a></li>
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">Производство печатных
-                    плат</a>
-                </li>
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">Монтаж печатных плат</a>
-                </li>
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">Комплектующие</a></li>
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">Доставка</a></li>
-                <li class="footer__sections-item"><a class="footer__sections-link" href="#">Контакты</a></li>
-              </ul>
-            </div>
-            <div class="footer__contacts">
-              <h2 class="footer__contacts-title">Наш офис</h2>
-              <button class="footer__btn footer__btn--plus" id="btn-contacts" aria-label="Кнопка панели контакты сайта" type="button"></button>
-              <div class="footer__contacts-wrap">
-                <p class="footer__contacts-text">г. Мытищи, Олимпийский проспект, д.10</p>
-                <a class="footer__tel-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-                <a class="footer__tel-link" href="tel:+79250038767">+7 (925) 003-87-67</a>
-                <a class="footer__tel-link" href="tel:+792692608079">+7 (926) 926-080-79</a>
+      <div class="footer__wrap footer__wrap--top">
+        <div class="footer__wrap-social">
+          <div class="footer__logo">
+            <a class="footer__logo-link" href="#">
+              <img src="img/logo.svg" width="52" height="52" alt="логотип сайта smart device">
+              <div class="footer__logo-wrap">
+                <p class="footer__logo-title">Service Device</p>
+                <span class="footer__logo-text">умные технологии</span>
               </div>
-            </div>
+            </a>
           </div>
+          <p class="footer__text">1999-2018 SD Service Devices</p>
+          <ul class="footer__social">
+            <li class="footer__item"><a class="footer__icon-link" href="https://www.facebook.com" title="группа Smart Device в фейсбуке" aria-label="группа Smart Device в фейсбуке">
+                <svg class="footer__icon footer__icon--facebook">
+                  <use xlink:href="#icon-facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item"><a class="footer__icon-link" href="https://www.ok.ru" title="группа Smart Device в одноклассниках" aria-label="группа Smart Device в одноклассниках">
+                <svg class="footer__icon footer__icon--ok">
+                  <use xlink:href="#icon-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item"><a class="footer__icon-link" href="https://www.ok.ru" title="группа Smart Device вконтакте" aria-label="группа Smart Device вконтакте">
+                <svg class="footer__icon footer__icon--vk">
+                  <use xlink:href="#icon-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="footer__wrap footer__wrap--bottom">
-          <div class="footer__wrap-block">
-            <p class="footer__wrap-text">Все права защищены</p>
-            <p class="footer__wrap-text">1999-2018 SD Service Devices</p>
-            <p class="footer__wrap-text">Условия конфиденциальности</p>
-            <p class="footer__wrap-text">Developed by wow studio</p>
+
+        <div class="footer__sections">
+          <h2 class="footer__sections-title">Разделы сайта</h2>
+          <button class="footer__btn footer__btn--plus" id="btn-sections" aria-label="Кнопка панели разделы сайта" type="button"></button>
+          <ul class="footer__sections-list">
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">О компании</a></li>
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">Продукты</a></li>
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">Производство печатных
+                плат</a>
+            </li>
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">Монтаж печатных плат</a>
+            </li>
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">Комплектующие</a></li>
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">Доставка</a></li>
+            <li class="footer__sections-item"><a class="footer__sections-link" href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <h2 class="footer__contacts-title">Наш офис</h2>
+          <button class="footer__btn footer__btn--plus" id="btn-contacts" aria-label="Кнопка панели контакты сайта" type="button"></button>
+          <div class="footer__contacts-wrap">
+            <p class="footer__contacts-text">г. Мытищи, Олимпийский проспект, д.10</p>
+            <a class="footer__tel-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+            <a class="footer__tel-link" href="tel:+79250038767">+7 (925) 003-87-67</a>
+            <a class="footer__tel-link" href="tel:+792692608079">+7 (926) 926-080-79</a>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer__wrap footer__wrap--bottom">
+      <div class="footer__wrap-block">
+        <p class="footer__wrap-text">Все права защищены</p>
+        <p class="footer__wrap-text">1999-2018 SD Service Devices</p>
+        <a class="footer__wrap-text footer__wrap-text--conf">Условия конфиденциальности</a>
+        <a class="footer__wrap-text footer__wrap-text--dev">Developed by wow studio</a>
+      </div>
+    </div>
+
   </footer>
   <div class="overlay visually-hidden"></div>
   <div class="modal visually-hidden">
@@ -345,9 +348,6 @@
     </symbol>
   </svg>
 
-  <script src="js/svg4everybody.min.js"></script>
-  <script>svg4everybody();</script>
-  <script src="js/picturefill.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>

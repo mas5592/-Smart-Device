@@ -65,23 +65,35 @@ svg * {
 
 .wrap-dark-blue {
   background-color: $dark-blue;
+  padding-bottom: 48px;
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 49px;
+  @media (max-width: $max-tab-width) {
+    padding-bottom: 0;
   }
 }
 
 .wrap-blue {
   background-color: $blue;
+  z-index: 1;
   position: relative;
+  padding-bottom: 81px;
+
+  @media (max-width: $max-tab-width) {
+    padding-bottom: 71px;
+  }
+
+  @media (max-width: $max-mob-width) {
+    padding-bottom: 31px;
+  }
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
 }

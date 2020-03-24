@@ -1,6 +1,6 @@
 .modal {
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   max-width: 490px;
   min-height: 605px;
   background-color: $blue;
@@ -155,8 +155,9 @@
 
 .modal__input,
 .modal__textarea {
-  background-color: $transparent;
+  background-color: $lit-blue;
   border: none;
+  cursor: pointer;
 }
 
 .modal__input {
@@ -177,6 +178,7 @@
   font-size: 16px;
   resize: none;
   letter-spacing: 0.5px;
+  color: $white;
 }
 
 
@@ -203,6 +205,7 @@
   position: relative;
   margin-left: 47px;
   color: $white;
+  cursor: pointer;
 
   &::before {
     content: "";

@@ -26,7 +26,7 @@ headerBtn.addEventListener('click', function (e) {
   }
 });
 
-var closeModal = function closeModal(e) {
+var closeModal = function closeModal() {
   modal.classList.add('visually-hidden');
   overlay.classList.add('visually-hidden');
   body.style.overflow = 'auto';
@@ -64,41 +64,47 @@ btnContacts.addEventListener('click', function (e) {
 });
 
 
-(function () {
-  window.addEventListener("DOMContentLoaded", function () {
-    function setCursorPosition(pos, elem) {
-      elem.focus();
-      if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
-      else if (elem.createTextRange) {
-        var range = elem.createTextRange();
-        range.collapse(true);
-        range.moveEnd("character", pos);
-        range.moveStart("character", pos);
-        range.select()
-      }
-    }
+window.addEventListener("DOMContentLoaded", function () {
+  var keyCode;
 
-    var mask = function(event) {
-      let matrix = "+7 (___) ___ ____",
-        i = 0,
-        def = matrix.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, "");
-      if (def.length >= val.length) val = def;
-      this.value = matrix.replace(/./g, function (a) {
-        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+  var maskOptions = function (event) {
+    event.keyCode && (keyCode = event.keyCode);
+    var pos = this.selectionStart;
+
+    if (pos < 3) event.preventDefault();
+    var matrix = "+7 (___) ___-__-__",
+      i = 0,
+      def = matrix.replace(/\D/g, ""),
+      val = this.value.replace(/\D/g, ""),
+      new_value = matrix.replace(/[_\d]/g, function (a) {
+        return i < val.length ? val.charAt(i++) || def.charAt(i) : a
       });
-      if (event.type == "blur") {
-        if (this.value.length == 2) this.value = ""
-      } else setCursorPosition(this.value.length, this)
-    };
+    i = new_value.indexOf("_");
+    if (i != -1) {
+      i < 5 && (i = 3);
+      new_value = new_value.slice(0, i)
+    }
+    var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+      function (a) {
+        return "\\d{1," + a.length + "}"
+      }).replace(/[+()]/g, "\\$&");
+    reg = new RegExp("^" + reg + "$");
+    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+    if (event.type == "blur" && this.value.length < 5) this.value = ""
+  }
 
-    let footerPhone= document.querySelector(".questions__input--phone");
-    let modalPhone = document.querySelector(".modal__phone");
-    modalPhone.addEventListener("input", mask, false);
-    modalPhone.addEventListener("focus", mask, false);
-    modalPhone.addEventListener("blur", mask, false);
-    footerPhone.addEventListener("input", mask, false);
-    footerPhone.addEventListener("focus", mask, false);
-    footerPhone.addEventListener("blur", mask, false);
-  });
-})();
+  var phoneQuestions = document.querySelector("#questions-phone");
+
+  phoneQuestions.addEventListener("input", maskOptions, false);
+  phoneQuestions.addEventListener("focus", maskOptions, false);
+  phoneQuestions.addEventListener("blur", maskOptions, false);
+  phoneQuestions.addEventListener("keydown", maskOptions, false)
+
+  var phoneModal = document.querySelector("#modal-phone");
+
+  phoneModal.addEventListener("input", maskOptions, false);
+  phoneModal.addEventListener("focus", maskOptions, false);
+  phoneModal.addEventListener("blur", maskOptions, false);
+  phoneModal.addEventListener("keydown", maskOptions, false)
+
+});
